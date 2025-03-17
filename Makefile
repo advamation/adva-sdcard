@@ -1,7 +1,7 @@
 # Makefile for adva-sdcard
 #
 # :Author:  Advamation / Roland Freikamp <support@advamation.de>
-# :Version: 2021-09-10
+# :Version: 2025-03-17
 
 ifeq ($(prefix),)
     prefix := /usr/local
@@ -19,7 +19,7 @@ install:
 	install -m 0755 src/build/adva_sdcard_smart_get $(DESTDIR)/$(prefix)/bin
 	install -m 0755 src/build/adva_sdcard_smart     $(DESTDIR)/$(prefix)/bin
 	install -m 0755 src/build/adva_sdcard_info      $(DESTDIR)/$(prefix)/bin
-	install -m 0644 LICENSE NEWS README $(DESTDIR)/$(prefix)/share/doc/adva-sdcard
+	install -m 0644 LICENSE NEWS README.md $(DESTDIR)/$(prefix)/share/doc/adva-sdcard
 	install -m 0644 doc/*.8 $(DESTDIR)/$(prefix)/share/man/man8
 uninstall:
 	rm -f  $(DESTDIR)/$(prefix)/bin/adva_sdcard_smart_get
