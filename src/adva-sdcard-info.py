@@ -20,7 +20,7 @@ Get/parse SD-card information from CID/CSD.
 :License:   MIT
 """
 
-__version__ = "1.0.0"
+__version__ = "1.2.0"
 __author__ = "Advamation <support@advamation.de>"
 
 import os

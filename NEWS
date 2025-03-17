@@ -1,5 +1,15 @@
-Release notes for adva_sdcard
+Release notes for adva-sdcard
 =============================
+
+1.2.0 - 2025-03-17
+	Improved documentation, rename to adva-sdcard-* and some small fixes.
+
+	* Added: support for Transcend 240I (mainly documentation)
+	* Changed: rename and convert README to README.md (for github)
+	* Changed: Use hypens instead of underscores for files/manpages/binaries.
+          For backwards-compatibility, binaries are created in both variants.
+	* Changed: Improve/fix documentation and error-messages.
+	* Fixed: bug in error-checking of reading SMART
 
 1.0.0 - 2021-09-10
 	Major rework and preparation for packaging.

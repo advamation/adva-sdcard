@@ -164,7 +164,7 @@ const char *USAGE="\
 usage: adva-sdcard-smart-get DEVICE\n\
 \n\
 Get raw SMART-information from industrial microSD-/SD-card.\n\
-Version 1.0.0 by Advamation <support@advamation.de>.\n\
+Version 1.2.0 by Advamation <support@advamation.de>.\n\
 \n\
 Example: adva-sdcard-smart-get /dev/mmcblk0\n\
 Note that this does not work with USB-cardreaders.\n\

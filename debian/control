@@ -14,3 +14,6 @@ Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}, python3
 Description: Advamation SD-card software
  Get information (CID, SMART) from microSD-/SD-card.
+ .
+ Mainly intended to get SMART-/endurance-information from industrial
+ microSD-cards, e.g. on a Raspberry Pi.

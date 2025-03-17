@@ -3,7 +3,7 @@ Advamation SD-card software
 
 **Website:** http://www.advamation.de  
 **Author:**  Advamation / Roland Freikamp \<support@advamation.de\>  
-**Version:** 1.0.1 (2025-03-17)
+**Version:** 1.2.0 (2025-03-17)
 
 Get information (CID, SMART) from microSD-/SD-cards.
 
@@ -72,7 +72,7 @@ Usage:
       usage: adva-sdcard-info [-h] [-p | -j] [-d DEVICE] [--version] [cid]
 
       Get/parse microSD-/SD-cards-information from mmc-device.
-      Version 1.0.0 by Advamation <support@advamation.de>.
+      Version 1.2.0 by Advamation <support@advamation.de>.
 
       positional arguments:
         cid                   CID as hex string or file containing the CID, default:
@@ -169,7 +169,7 @@ Usage:
         usage: adva-sdcard-smart-get DEVICE
 
         Get raw SMART-information from industrial microSD-/SD-cards.
-        Version 1.0.0 by Advamation <support@advamation.de>.
+        Version 1.2.0 by Advamation <support@advamation.de>.
 
         Example: adva-sdcard-smart-get /dev/mmcblk0
         Note that this does not work with USB-cardreaders.
@@ -188,7 +188,7 @@ Usage:
         usage: adva-sdcard-smart [-h] (-a | -e) [-p | -j] [-d DEVICE] [--version] [smartdata]
 
         Parse raw SMART-information from industrial microSD-/SD-cards.
-        Version 1.0.0 by Advamation <support@advamation.de>.
+        Version 1.2.0 by Advamation <support@advamation.de>.
 
         positional arguments:
           smartdata             file containing raw SMART-data, default: stdin

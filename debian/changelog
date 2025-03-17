@@ -1,3 +1,16 @@
+adva-sdcard (1.2.0) unstable; urgency=low
+
+  * Improved documentation, rename to adva-sdcard-* and some small fixes.
+
+    - Added: support for Transcend 240I (mainly documentation)
+    - Changed: rename and convert README to README.md (for github)
+    - Changed: Use hypens instead of underscores for files/manpages/binaries.
+      For backwards-compatibility, binaries are created in both variants.
+    - Changed: Improve/fix documentation and error-messages.
+    - Fixed: bug in error-checking of reading SMART
+
+ -- Advamation / Roland Freikamp <support@advamation.de>  Mon, 17 Mar 2025 15:00:00 +0200
+
 adva-sdcard (1.0.0) unstable; urgency=low
 
   * Initial release as Debian package, see NEWS for details
