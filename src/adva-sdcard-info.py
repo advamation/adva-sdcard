@@ -15,7 +15,7 @@ Get/parse SD-card information from CID/CSD.
     130: aborted (e.g. via Ctrl-C) (ECONNABORTED)
 
 :Author:    Advamation / Roland Freikamp <support@advamation.de>
-:Version:   2021-09-10
+:Version:   2025-03-17
 :Copyright: Advamation <info@advamation.de>
 :License:   MIT
 """
@@ -196,7 +196,7 @@ Note that this does not work with USB-cardreaders.\n""")
     group.add_argument("-j", "--json",     action='store_true', help="Print output in JSON format.")
 
     parser.add_argument("-d", "--device", action='store', help="Retrieve CID directly from SD-card.")
-    parser.add_argument("cid", nargs='?', type=str, help='CID as hex string or file containing the CID, default: stdin')
+    parser.add_argument("cid", nargs='?', type=str, help='CID as hex string or file containing the CID, or - for stdin')
     parser.add_argument("--version", action='version', version="%(prog)s " + __version__)
 
     if arglist is None  and  len(sys.argv) <= 1:
@@ -210,15 +210,15 @@ Note that this does not work with USB-cardreaders.\n""")
         try:
             cid = cid_get(args.device)
         except ValueError as err:
-            print("ERROR: %s" % str(err).replace('dev', 'DEVICE'))
+            print("ERROR: %s" % str(err).replace("'dev'", 'DEVICE'))
             return 2
         except FileNotFoundError as err:
-            print("ERROR: %s" % str(err).replace('dev', 'DEVICE'))
+            print("ERROR: %s" % str(err))
             return 19   # ENODEV
         except IOError as err:
-            print("ERROR: %s" % str(err).replace('dev', 'DEVICE'))
+            print("ERROR: %s" % str(err))
             return 5    # EIO
-    elif args.cid:
+    elif args.cid and args.cid != "-":
         if len(args.cid) == 32:
             try:
                 int(args.cid, 16)
@@ -227,7 +227,7 @@ Note that this does not work with USB-cardreaders.\n""")
                 pass
         if not cid:
             if not os.path.isfile(args.cid):
-                print("ERROR: Invalid arguments, 'cid' must be hex or a regular file. (%s)" % args.cid)
+                print("ERROR: Invalid arguments, 'cid' must be a 16-byte hex string or a regular file. (%s)" % args.cid)
                 return 2
             try:
                 with open(args.cid, 'r', encoding="utf-8") as f:

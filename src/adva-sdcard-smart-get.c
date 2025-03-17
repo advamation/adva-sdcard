@@ -13,15 +13,15 @@ Getting SMART-information is split into two parts:
 
 Supported cards:
 
-- Apacer CV110-MSD / AK6.112* (not yet tested)
-- Apacer CH110-MSD / AK6.118* (not yet tested)
-- Apacer H1-M  / AP-*-1HTM (only microSD tested)
-- Apacer H2-M  / AP-*-1RTM (only microSD tested)
-- Apacer H1-SL / AP-*-2HTM (only microSD tested)
-- Apacer H2-SL / AP-*-2RTM (only microSD tested)
-- maybe more Apacer AP-*-* (not tested)
-- Transcend 230I
 - Transcend 240I
+- Transcend 230I
+- Apacer CH110-MSD / AK6.118* (not yet tested)
+- Apacer CV110-MSD / AK6.112* (not yet tested)
+- Apacer H2-SL / AP-*-2RTM (only microSD tested)
+- Apacer H1-SL / AP-*-2HTM (only microSD tested)
+- Apacer H2-M  / AP-*-1RTM (only microSD tested)
+- Apacer H1-M  / AP-*-1HTM (only microSD tested)
+- maybe more Apacer AP-*-* (not tested)
 
 Works on Raspberry Pi with /dev/mmcblk*,
 does not work with USB-cardreaders.
@@ -169,14 +169,14 @@ Version 1.0.0 by Advamation <support@advamation.de>.\n\
 Example: adva-sdcard-smart-get /dev/mmcblk0\n\
 Note that this does not work with USB-cardreaders.\n\
 Supported cards:\n\
-    - Apacer CV110-MSD / AK6.112*\n\
-    - Apacer CH110-MSD / AK6.118*\n\
-    - Apacer H1-M  / AP-*-1HTM\n\
-    - Apacer H2-M  / AP-*-1RTM\n\
-    - Apacer H1-SL / AP-*-2HTM\n\
-    - Apacer H2-SL / AP-*-2RTM\n\
-    - Transcend 230I\n\
     - Transcend 240I\n\
+    - Transcend 230I\n\
+    - Apacer CH110-MSD / AK6.118*\n\
+    - Apacer CV110-MSD / AK6.112*\n\
+    - Apacer H2-SL / AP-*-2RTM\n\
+    - Apacer H1-SL / AP-*-2HTM\n\
+    - Apacer H2-M  / AP-*-1RTM\n\
+    - Apacer H1-M  / AP-*-1HTM\n\
 ";
 
 int main(int argc, char *argv[])
