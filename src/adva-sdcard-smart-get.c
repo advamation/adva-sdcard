@@ -161,12 +161,12 @@ int smart_get(int fd, char* type, unsigned char *smart)
 
 //========================================
 const char *USAGE="\
-usage: adva_sdcard_smart_get DEVICE\n\
+usage: adva-sdcard-smart-get DEVICE\n\
 \n\
 Get raw SMART-information from industrial microSD-/SD-card.\n\
 Version 1.0.0 by Advamation <support@advamation.de>.\n\
 \n\
-Example: adva_sdcard_smart_get /dev/mmcblk0\n\
+Example: adva-sdcard-smart-get /dev/mmcblk0\n\
 Note that this does not work with USB-cardreaders.\n\
 Supported cards:\n\
     - Apacer CV110-MSD / AK6.112*\n\

@@ -1,13 +1,13 @@
-\" Manpage for adva_sdcard_info
-.TH ADVA_SDCARD_INFO 8 "2021-09-10" "adva_sdcard-1.0.0" "Advamation SD-card tools"
+\" Manpage for adva-sdcard-info
+.TH ADVA-SDCARD-INFO 8 "2021-09-10" "adva-sdcard-1.0.0" "Advamation SD-card tools"
 .SH NAME
-adva_sdcard_info \- get/parse microSD-/SD-card-information
+adva-sdcard-info \- get/parse microSD-/SD-card-information
 .SH SYNOPSIS
-\fBadva_sdcard_info\fR [\fB\-h\fR] [\fB\-p\fR | \fB\-j\fR] [\fB\-d\fR \fIDEVICE\fR] [\fB\-\-version\fR] [\fIcid\fR]
+\fBadva-sdcard-info\fR [\fB\-h\fR] [\fB\-p\fR | \fB\-j\fR] [\fB\-d\fR \fIDEVICE\fR] [\fB\-\-version\fR] [\fIcid\fR]
 .SH DESCRIPTION
 Get/parse microSD\-/SD\-card\-information from mmc\-device.
 .br
-For details, see adva-sdcard/README.
+For details, see adva-sdcard/README.md.
 .PP
 Note that this does not work with USB\-cardreaders.
 .SH OPTIONS
@@ -41,12 +41,12 @@ Show program's version number and exit.
 130: aborted (e.g. via Ctrl-C) (ECONNABORTED)
 .EE
 .SH EXAMPLES
-adva_sdcard_info 275048415...
+adva-sdcard-info 275048415...
 .br
-adva_sdcard_info -d /dev/mmcblk0
+adva-sdcard-info -d /dev/mmcblk0
 .SH AUTHORS
 Advamation / Roland Freikamp <support@advamation.de>
 .SH SEE ALSO
-.BR adva_scard_smart (8),
-.BR adva_sdcard_smart_get (8),
-adva-sdcard/README
+.BR adva-scard-smart (8),
+.BR adva-sdcard-smart-get (8),
+adva-sdcard/README.md

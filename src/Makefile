@@ -1,17 +1,17 @@
-# sdcard_smart_get: Makefile
+# adva-sdcard: Makefile
 CC=gcc
 CFLAGS=-O2 -Wall -Wextra -pedantic -fpic -fpie -fstack-protector-all -fstack-protector-strong -D_FORTIFY_SOURCE=2
 #-fstack-clash-protection
 LDFLAGS=
 
-all: adva_sdcard_smart_get adva_sdcard_smart adva_sdcard_info
+all: adva-sdcard-smart-get adva-sdcard-smart adva-sdcard-info
 
-adva_sdcard_smart_get: adva_sdcard_smart_get.o
-	$(CC) $(CFLAGS) -o build/adva_sdcard_smart_get build/adva_sdcard_smart_get.o $(LDFLAGS)
-adva_sdcard_smart:
-	cp -p adva_sdcard_smart.py build/adva_sdcard_smart
-adva_sdcard_info:
-	cp -p adva_sdcard_info.py build/adva_sdcard_info
+adva-sdcard-smart-get: adva-sdcard-smart-get.o
+	$(CC) $(CFLAGS) -o build/adva-sdcard-smart-get build/adva-sdcard-smart-get.o $(LDFLAGS)
+adva-sdcard-smart:
+	cp -p adva-sdcard-smart.py build/adva-sdcard-smart
+adva-sdcard-info:
+	cp -p adva-sdcard-info.py build/adva-sdcard-info
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o build/$@

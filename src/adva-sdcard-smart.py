@@ -35,7 +35,7 @@ does not work with USB-cardreaders.
     5:   cannot read from device (EIO)
     22:  invalid CID data (EINVAL)
     130: aborted (e.g. via Ctrl-C) (ECONNABORTED)
-    errno: from adva_sdcard_smart_get
+    errno: from adva-sdcard-smart-get
 
 :Author:    Advamation / Roland Freikamp <support@advamation.de>
 :Version:   2021-09-10
@@ -298,7 +298,7 @@ Supported cards:\n\
     group.add_argument("-p", "--parsable", action='store_true', help="Print output in parsable format.")
     group.add_argument("-j", "--json",     action='store_true', help="Print output in JSON format.")
 
-    parser.add_argument("-d", "--device", action='store', help="Retrieve raw SMART-data directly from SD-card via adva_sdcard_smart_get (instead of 'smartdata').")
+    parser.add_argument("-d", "--device", action='store', help="Retrieve raw SMART-data directly from SD-card via adva-sdcard-smart-get (instead of 'smartdata').")
     parser.add_argument("smartdata", nargs='?', type=argparse.FileType('r'), default=sys.stdin, help='file containing raw SMART-data, default: stdin')
     parser.add_argument("--version", action='version', version="%(prog)s " + __version__)
 
@@ -310,7 +310,7 @@ Supported cards:\n\
     # retrieve raw SMART-data
     if args.device:
         try:
-            p = subprocess.run(["adva_sdcard_smart_get", args.device], capture_output=True, encoding='utf-8')
+            p = subprocess.run(["adva-sdcard-smart-get", args.device], capture_output=True, encoding='utf-8')
             if p.returncode == 0:
                 raw = p.stdout.strip()
             else:

@@ -1,13 +1,13 @@
-\" Manpage for adva_sdcard_smart
-.TH ADVA_SDCARD_SMART 8 "2021-09-10" "adva_sdcard-1.0.0" "Advamation SD-card tools"
+\" Manpage for adva-sdcard-smart
+.TH ADVA-SDCARD-SMART 8 "2021-09-10" "adva-sdcard-1.0.0" "Advamation SD-card tools"
 .SH NAME
-adva_sdcard_smart \- parse raw SMART-information from microSD-/SD-card
+adva-sdcard-smart \- parse raw SMART-information from microSD-/SD-card
 .SH SYNOPSIS
-\fBadva_sdcard_smart\fR [\fB\-h\fR] (\fB\-a\fR|\fB\-e\fR) [\fB\-p\fR|\fB\-j\fR] [\fB\-d\fR \fIDEVICE\fR] [\fB\-\-version\fR] [\fIsmartdata\fR]
+\fBadva-sdcard-smart\fR [\fB\-h\fR] (\fB\-a\fR|\fB\-e\fR) [\fB\-p\fR|\fB\-j\fR] [\fB\-d\fR \fIDEVICE\fR] [\fB\-\-version\fR] [\fIsmartdata\fR]
 .SH DESCRIPTION
 Parse raw SMART-information from industrial microSD-/SD-card.
 .br
-For details, see adva-sdcard/README.
+For details, see adva-sdcard/README.md.
 .PP
 Note that this does not work with USB-cardreaders.
 .PP
@@ -48,7 +48,7 @@ Print output in JSON format.
 .TP
 \fB\-d\fR \fIDEVICE\fR, \fB\-\-device\fR \fIDEVICE\fR
 Retrieve raw SMART\-data directly from SD\-card via
-adva_sdcard_smart_get (instead of 'smartdata').
+adva-sdcard-smart-get (instead of 'smartdata').
 .TP
 .B -\-version
 Show program's version number and exit.
@@ -59,11 +59,11 @@ Show program's version number and exit.
 5:   cannot read from device (EIO)
 22:  invalid CID data (EINVAL)
 130: aborted (e.g. via Ctrl-C) (ECONNABORTED)
-errno: error from adva_sdcard_smart_get
+errno: error from adva-sdcard-smart-get
 .EE
 .SH AUTHORS
 Advamation / Roland Freikamp <support@advamation.de>
 .SH SEE ALSO
-.BR adva_scard_smart_get (8),
-.BR adva_sdcard_info (8),
-adva-sdcard/README
+.BR adva-scard-smart-get (8),
+.BR adva-sdcard-info (8),
+adva-sdcard/README.md

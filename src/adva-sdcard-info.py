@@ -187,8 +187,8 @@ Version %s by %s.""" % (__version__, __author__),
         formatter_class=argparse.RawDescriptionHelpFormatter,   # for keeping newlines in description
         epilog="""
 Examples:
-    adva_sdcard_info 275048415...
-    adva_sdcard_info -d /dev/mmcblk0
+    adva-sdcard-info 275048415...
+    adva-sdcard-info -d /dev/mmcblk0
 Note that this does not work with USB-cardreaders.\n""")
 
     group = parser.add_mutually_exclusive_group(required=False)
