@@ -121,6 +121,7 @@ Supported cards:
 - Apacer CV110-MSD / AK6.112...
 - Apacer CH110-MSD / AK6.118...
 - Transcend 230I
+- Transcend 240I
 
 Notes:
 

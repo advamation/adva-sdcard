@@ -21,6 +21,7 @@ Supported cards:
 - Apacer H2-SL / AP-*-2RTM (only microSD tested)
 - maybe more Apacer AP-*-* (not tested)
 - Transcend 230I
+- Transcend 240I
 
 Works on Raspberry Pi with /dev/mmcblk*,
 does not work with USB-cardreaders.
@@ -175,6 +176,7 @@ Supported cards:\n\
     - Apacer H1-SL / AP-*-2HTM\n\
     - Apacer H2-SL / AP-*-2RTM\n\
     - Transcend 230I\n\
+    - Transcend 240I\n\
 ";
 
 int main(int argc, char *argv[])
