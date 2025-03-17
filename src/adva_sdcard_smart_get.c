@@ -39,7 +39,7 @@ prints:
     - to stderr: usage-information and/or error-message on error
 
 :Author:    Advamation / Roland Freikamp <support@advamation.de>
-:Version:   2021-09-10
+:Version:   2025-03-17
 :Copyright: Advamation <info@advamation.de>
 :License:   MIT
 ***/
@@ -88,7 +88,7 @@ Get SMART-information.
     -2: card not supported / no SMART
     -3: card not supported / no SMART / invalid SMART-data
 ***/
-int smart_get(int fd, char* type, char *smart)
+int smart_get(int fd, char* type, unsigned char *smart)
 {
     int ret;
     struct mmc_ioc_cmd idata;
@@ -263,7 +263,7 @@ int main(int argc, char *argv[])
     }
 
     // get smart-information
-    char smart[SECTOR_SIZE];
+    unsigned char smart[SECTOR_SIZE];
     ret = smart_get(fd, type, smart);
     close(fd);
     if(ret == -2) {
