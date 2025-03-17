@@ -1,0 +1,68 @@
+\" Manpage for adva_sdcard_smart
+.TH ADVA_SDCARD_SMART 8 "2021-09-10" "adva_sdcard-1.0.0" "Advamation SD-card tools"
+.SH NAME
+adva_sdcard_smart \- parse raw SMART-information from microSD-/SD-card
+.SH SYNOPSIS
+\fBadva_sdcard_smart\fR [\fB\-h\fR] (\fB\-a\fR|\fB\-e\fR) [\fB\-p\fR|\fB\-j\fR] [\fB\-d\fR \fIDEVICE\fR] [\fB\-\-version\fR] [\fIsmartdata\fR]
+.SH DESCRIPTION
+Parse raw SMART-information from industrial microSD-/SD-card.
+.br
+For details, see adva-sdcard/README.
+.PP
+Note that this does not work with USB-cardreaders.
+.PP
+Supported cards:
+.in +4n
+.EX
+\- Apacer CV110\-MSD / AK6.112*
+\- Apacer CH110\-MSD / AK6.118*
+\- Apacer H1\-M  / AP\-*\-1HTM
+\- Apacer H2\-M  / AP\-*\-1RTM
+\- Apacer H1\-SL / AP\-*\-2HTM
+\- Apacer H2\-SL / AP\-*\-2RTM
+\- Transcend 230I
+.EE
+.in
+.SH OPTIONS
+.SS "positional arguments:"
+.TP
+.I smartdata
+file containing raw SMART\-data, default: stdin
+.SS "optional arguments:"
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Show this help message and exit.
+.TP
+\fB\-a\fR, \fB\-\-all\fR
+Show all SMART\-data.
+.TP
+\fB\-e\fR, \fB\-\-endurance\fR
+Show only remaining endurance (as integer in percent).
+.TP
+\fB\-p\fR, \fB\-\-parsable\fR
+Print output in parsable format.
+.TP
+\fB\-j\fR, \fB\-\-json\fR
+Print output in JSON format.
+.TP
+\fB\-d\fR \fIDEVICE\fR, \fB\-\-device\fR \fIDEVICE\fR
+Retrieve raw SMART\-data directly from SD\-card via
+adva_sdcard_smart_get (instead of 'smartdata').
+.TP
+.B -\-version
+Show program's version number and exit.
+.SH EXIT STATUS
+.EX
+0:   success
+2:   invalid commandline-parameters
+5:   cannot read from device (EIO)
+22:  invalid CID data (EINVAL)
+130: aborted (e.g. via Ctrl-C) (ECONNABORTED)
+errno: error from adva_sdcard_smart_get
+.EE
+.SH AUTHORS
+Advamation / Roland Freikamp <support@advamation.de>
+.SH SEE ALSO
+.BR adva_scard_smart_get (8),
+.BR adva_sdcard_info (8),
+adva-sdcard/README

@@ -1,0 +1,16 @@
+Source: adva-sdcard
+Section: utils
+Priority: optional
+Maintainer: Advamation / Roland Freikamp <support@advamation.de>
+Build-Depends: debhelper (>=11~)
+Standards-Version: 4.1.4
+Homepage: https://www.advamation.de
+#Vcs-Git: https://.../adva-sdcard.git
+#Vcs-Browser: https://.../adva-sdcard.git
+
+Package: adva-sdcard
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}, python3
+Description: Advamation SD-card software
+ Get information (CID, SMART) from microSD-/SD-card.

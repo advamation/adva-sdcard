@@ -1,0 +1,5 @@
+adva-sdcard (1.0.0) unstable; urgency=low
+
+  * Initial release as Debian package, see NEWS for details
+
+ -- Advamation / Roland Freikamp <support@advamation.de>  Thu, 09 Sep 2021 18:00:00 +0200

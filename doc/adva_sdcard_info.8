@@ -1,0 +1,52 @@
+\" Manpage for adva_sdcard_info
+.TH ADVA_SDCARD_INFO 8 "2021-09-10" "adva_sdcard-1.0.0" "Advamation SD-card tools"
+.SH NAME
+adva_sdcard_info \- get/parse microSD-/SD-card-information
+.SH SYNOPSIS
+\fBadva_sdcard_info\fR [\fB\-h\fR] [\fB\-p\fR | \fB\-j\fR] [\fB\-d\fR \fIDEVICE\fR] [\fB\-\-version\fR] [\fIcid\fR]
+.SH DESCRIPTION
+Get/parse microSD\-/SD\-card\-information from mmc\-device.
+.br
+For details, see adva-sdcard/README.
+.PP
+Note that this does not work with USB\-cardreaders.
+.SH OPTIONS
+.SS "positional arguments:"
+.TP
+.I cid
+CID as hex string or file containing the CID, default: stdin
+.SS "optional arguments:"
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Show this help message and exit.
+.TP
+\fB\-p\fR, \fB\-\-parsable\fR
+Print output in parsable format.
+.TP
+\fB\-j\fR, \fB\-\-json\fR
+Print output in JSON format.
+.TP
+\fB\-d\fR \fIDEVICE\fR, \fB\-\-device\fR \fIDEVICE\fR
+Retrieve CID directly from SD\-card.
+.TP
+.B \-\-version
+Show program's version number and exit.
+.SH EXIT STATUS
+.EX
+0:   success
+2:   invalid commandline-parameters
+19:  device not found (ENODEV)
+5:   cannot read from device (EIO)
+22:  invalid CID data (EINVAL)
+130: aborted (e.g. via Ctrl-C) (ECONNABORTED)
+.EE
+.SH EXAMPLES
+adva_sdcard_info 275048415...
+.br
+adva_sdcard_info -d /dev/mmcblk0
+.SH AUTHORS
+Advamation / Roland Freikamp <support@advamation.de>
+.SH SEE ALSO
+.BR adva_scard_smart (8),
+.BR adva_sdcard_smart_get (8),
+adva-sdcard/README

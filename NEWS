@@ -1,0 +1,21 @@
+Release notes for adva_sdcard
+=============================
+
+1.0.0 - 2021-09-10
+	Major rework and preparation for packaging.
+
+	* Changed: rename from sdcard_* to adva_sdcard_*
+	* Changed: modify/unify commandline-arguments, output and exit codes
+	* Changed: improve documentation, improved error-handling
+	* Added: support for Debian- and NixOS-packages
+	* Added: manpages
+	* Removed: sdcard_smart_mmcblk0_sudo.sh, sdcard_smart_mmcblk0_suid.sh
+	  (now integrated into adva_sdcard_smart)
+
+0.9.0 - 2021-08-30
+	* Added: support for Transcend 230I
+	* Changed: rename some SMART-fields
+	* Changed: improve error-handling and documentation
+
+0.5.0 - 2021-04-26
+	* 1st release (still beta)

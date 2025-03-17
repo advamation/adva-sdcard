@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+# Output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+# Apply all hardening options
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+# Package maintainers to append CFLAGS
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# Package maintainers to append LDFLAGS
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+%:
+	dh $@
+
+# Use "make prefix=/usr" (override prefix=/usr/local in Makefile)
+override_dh_auto_install:
+	dh_auto_install -- prefix=/usr
+
+# Do not install python .pyc .pyo if they exist
+#override_dh_install:
+#	dh_install --list-missing -X.pyc -X.pyo
